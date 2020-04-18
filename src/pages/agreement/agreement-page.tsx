@@ -48,7 +48,7 @@ class AgreementPage extends React.Component<AgreementPageProps, AgreementPageSta
     constructor(props: any) {
         super(props);
         this.state = {
-            current: 0,
+            current: 1,
         };
     }
 
