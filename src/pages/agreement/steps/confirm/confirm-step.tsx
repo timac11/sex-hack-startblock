@@ -2,7 +2,7 @@ import React from "react";
 import {Button, Typography} from "antd";
 import "./confirm-step.less";
 
-const {Title, Paragraph, Text} = Typography;
+const {Title, Paragraph} = Typography;
 
 const ConfirmStep = () => {
     return (
@@ -27,6 +27,6 @@ const ConfirmStep = () => {
             </div>
         </div>
     );
-}
+};
 
 export default ConfirmStep;
