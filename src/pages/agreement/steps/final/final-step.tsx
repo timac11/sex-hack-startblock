@@ -5,3 +5,4 @@ const FinalStep = () => {
 
 };
 
+export default FinalStep;
