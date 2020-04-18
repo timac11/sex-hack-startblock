@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27fcb363-c3ca-455e-a371-c3ab67f30716" name="Default Changelist" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +35,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -49,6 +49,7 @@
       <updated>1587209086438</updated>
       <workItem from="1587209087833" duration="592000" />
       <workItem from="1587209790337" duration="1006000" />
+      <workItem from="1587211318528" duration="272000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1587209453918</created>
@@ -78,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587210569355</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update gitignore">
+      <created>1587211476668</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587211476669</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,23 +94,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <MESSAGE value="update gitignore" />
     <MESSAGE value="minor fix" />
     <MESSAGE value="remove node_modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove node_modules" />
+    <MESSAGE value="update gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update gitignore" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="462" y="139" key="CommitChangelistDialog2" timestamp="1587210942428">
+    <state x="461" y="138" key="CommitChangelistDialog2" timestamp="1587211625472">
       <screen x="0" y="23" width="1792" height="1028" />
     </state>
-    <state x="462" y="139" key="CommitChangelistDialog2/0.23.1792.1028@0.23.1792.1028" timestamp="1587210942428" />
-    <state x="496" y="277" key="Vcs.Push.Dialog.v2" timestamp="1587210572289">
+    <state x="461" y="138" key="CommitChangelistDialog2/0.23.1792.1028@0.23.1792.1028" timestamp="1587211625472" />
+    <state x="496" y="277" key="Vcs.Push.Dialog.v2" timestamp="1587211627455">
       <screen x="0" y="23" width="1792" height="1028" />
     </state>
-    <state x="496" y="277" key="Vcs.Push.Dialog.v2/0.23.1792.1028@0.23.1792.1028" timestamp="1587210572289" />
-    <state x="679" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587210605114">
+    <state x="496" y="277" key="Vcs.Push.Dialog.v2/0.23.1792.1028@0.23.1792.1028" timestamp="1587211627455" />
+    <state x="679" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587211391503">
       <screen x="0" y="23" width="1792" height="1028" />
     </state>
-    <state x="679" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1028@0.23.1792.1028" timestamp="1587210605114" />
+    <state x="679" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1028@0.23.1792.1028" timestamp="1587211391503" />
   </component>
 </project>
