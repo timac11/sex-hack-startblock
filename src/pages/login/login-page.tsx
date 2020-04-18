@@ -17,12 +17,12 @@ const validationRules = {
 
 const LoginPage = () => {
     return (
-        <div className="gr-ux-login-page__form-wrapper">
-            <div className="gr-ux-login-page__logo-wrapper">
-                <img className="gr-ux-login-page__logo" src={startBlock} alt=""/>
+        <div className="ux-login-page__form-wrapper">
+            <div className="ux-login-page__logo-wrapper">
+                <img className="ux-login-page__logo" src={startBlock} alt=""/>
             </div>
             <Form name="basic"
-                  className="gr-ux-login-page__form"
+                  className="ux-login-page__form"
                   initialValues={{remember: true}}
                   {...layout}
             >

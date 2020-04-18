@@ -33,9 +33,9 @@ const roles = [
 
 const RegistrationPage = () => {
     return (
-        <div className="gr-ux-registration-page__form-wrapper">
+        <div className="ux-registration-page__form-wrapper">
             <Form name="basic"
-                  className="gr-ux-registration-page__form"
+                  className="ux-registration-page__form"
                   initialValues={{remember: true}}
                   validateMessages={validateMessages}
                   {...layout}

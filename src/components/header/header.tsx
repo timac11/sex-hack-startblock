@@ -12,14 +12,14 @@ const AppHeader = () => {
     const history = useHistory();
 
     return (
-        <Header className="gr-ux-header">
+        <Header className="ux-header">
             <div>
-                <img className="gr-ux-header__logo"
+                <img className="ux-header__logo"
                      alt=""
                      src={LogoStartBlock}/>
             </div>
-            <div className="gr-ux-header__buttons-wrapper">
-                <Button className="gr-ux-header__sign-in-button"
+            <div className="ux-header__buttons-wrapper">
+                <Button className="ux-header__sign-in-button"
                         type="default"
                         size={size}
                         onClick={() => history.push("/login")}>

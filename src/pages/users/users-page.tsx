@@ -7,8 +7,8 @@ const { Content } = Layout;
 
 const UsersPage = () => {
     return (
-        <Content className="gr-ux-users-page__content-container">
-            <div className="gr-ux-users-page__content">
+        <Content className="ux-users-page__content-container">
+            <div className="ux-users-page__content">
                 <Table columns={columns} dataSource={data}/>
             </div>
         </Content>
