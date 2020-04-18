@@ -1,8 +1,9 @@
 import React from "react";
 import {Button, Descriptions, Typography} from 'antd';
 import "./medical-step.less";
+import {verifyHash} from "../../../../blockchain/medicalRegistry";
 
-const {Title, Paragraph, Text} = Typography;
+const {Title} = Typography;
 
 const medicalSteps: string[] = [
     "Syphilis",
@@ -31,12 +32,17 @@ const MedicalStep = () => {
                 </Descriptions>
             </Typography>
             <div className="ux-medical-step__button-wrapper">
-                <Button type="primary" block size="large">
+                <Button type="primary" block size="large" onClick={() => verifyHash(getInformation())}>
                     Check in blockchain
                 </Button>
             </div>
         </div>
     );
+};
+
+const getInformation = () => {
+    // TODO add information about user
+    return {};
 };
 
 export default MedicalStep;
