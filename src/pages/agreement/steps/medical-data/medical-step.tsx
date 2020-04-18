@@ -1,34 +1,34 @@
 import React from "react";
-import {Button, Typography} from 'antd';
+import {Button, Descriptions, Typography} from 'antd';
 import "./medical-step.less";
 
 const {Title, Paragraph, Text} = Typography;
+
+const medicalSteps: string[] = [
+    "Syphilis",
+    "Gonorrhoea",
+    "Chancroid",
+    "AIDS",
+    "Hepatitis B",
+    "Genital herpes",
+    "Genital Warts",
+    "Chlamydiasis",
+    "Trichomoniasis",
+    "Candidiasis"
+];
 
 const MedicalStep = () => {
     return (
         <div className="ux-medical-step__container">
             <Typography>
                 <Title>Medical Data Information</Title>
-                <Paragraph>
-                    In the process of internal desktop applications development, many different design specs and
-                    implementations would be involved, which might cause designers and developers difficulties and
-                    duplication and reduce the efficiency of development.
-                </Paragraph>
-                <Paragraph>
-                    After massive project practice and summaries, Ant Design, a design language for background
-                    applications, is refined by Ant UED Team, which aims to
-                    <Text strong>
-                        uniform the user interface specs for internal background projects, lower the unnecessary
-                        cost of design differences and implementation and liberate the resources of design and
-                        front-end development
-                    </Text>.
-                </Paragraph>
-                <Title level={2}>Guidelines and Resources</Title>
-                <Paragraph>
-                    We supply a series of design principles, practical patterns and high quality design resources
-                    (<Text code>Sketch</Text> and <Text code>Axure</Text>), to help people create their product
-                    prototypes beautifully and efficiently.
-                </Paragraph>
+                <Descriptions title="Diseases">
+                    {medicalSteps.map((step) => <Descriptions.Item label={step}>none</Descriptions.Item>)}
+                </Descriptions>
+                <Descriptions className="ux-medical-step__doctor-info" title="Doctor Info">
+                    <Descriptions.Item label="Name">Doctor Who</Descriptions.Item>
+                    <Descriptions.Item label="Public Key">0x12386asabfqkjwhrqwr78123</Descriptions.Item>
+                </Descriptions>
             </Typography>
             <div className="ux-medical-step__button-wrapper">
                 <Button type="primary" block size="large">

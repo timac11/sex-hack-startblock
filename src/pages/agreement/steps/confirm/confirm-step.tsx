@@ -6,7 +6,7 @@ const {Title, Paragraph, Text} = Typography;
 
 const ConfirmStep = () => {
     return (
-        <div className="ux-medical-step__container">
+        <div className="ux-confirm-step__container">
             <Typography>
                 <Title>Confirmation Data Information</Title>
                 <Paragraph>

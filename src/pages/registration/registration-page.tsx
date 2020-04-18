@@ -25,9 +25,9 @@ const roles = [
         label: "User"
     },
     {
-        value: "admin",
-        key: "admin",
-        label: "Admin"
+        value: "doctor",
+        key: "doctor",
+        label: "Doctor"
     }
 ];
 
