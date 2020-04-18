@@ -3,6 +3,7 @@ import {Steps, Button, message} from 'antd';
 import "./agreement-page.less";
 import MedicalStep from "./steps/medical-data/medical-step";
 import ConfirmStep from "./steps/confirm/confirm-step";
+import FinalStep from "./steps/final/final-step";
 
 const {Step} = Steps;
 
@@ -39,8 +40,10 @@ const getCurrentStepContent = (stepNumber: number) => {
             return <MedicalStep/>;
         case 1:
             return <ConfirmStep/>;
+        case 2:
+            return <FinalStep />;
         default:
-            return <div>Content {stepNumber}</div>
+            throw new Error(`Unknown step: ${stepNumber}`)
     }
 };
 
@@ -48,7 +51,7 @@ class AgreementPage extends React.Component<AgreementPageProps, AgreementPageSta
     constructor(props: any) {
         super(props);
         this.state = {
-            current: 1,
+            current: 2,
         };
     }
 
