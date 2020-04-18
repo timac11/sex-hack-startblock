@@ -12,6 +12,7 @@ import AppHeader from "./components/header/header";
 import UsersPage from "./pages/users/users-page";
 import {Layout} from "antd";
 import UserPage from "./pages/user/user-page";
+import AgreementPage from "./pages/agreement/agreement-page";
 
 class App extends Component {
     render() {
@@ -28,6 +29,9 @@ class App extends Component {
                     </Route>
                     <Route path="/registration">
                         <RegistrationPage/>
+                    </Route>
+                    <Route path="/agreement">
+                        <AgreementPage/>
                     </Route>
                     <Route path="/user">
                         <UserPage/>
