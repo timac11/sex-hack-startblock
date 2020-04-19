@@ -20,18 +20,18 @@ const FinalStep = () => {
             <Card className={'ux-final-step__male'}>
                 <Typography>
                     <Row>
-                        <Col span={14}>
+                        <Col span={16}>
                             <Text><Text strong>Full name:</Text> <br/> {you.firstName}<br/> {you.lastName}</Text>
                             <br/>
                             <Text><Text strong>Date of birth:</Text><br/>{you.dateOfBirth}</Text>
                             <br/>
                             <Text><Text strong>ID:</Text> <br/> {you.id}</Text>
                         </Col>
-                        <Col span={10}>
+                        <Col span={8}>
                             <Portrait src={you.portraitSrc}/>
                         </Col>
                     </Row>
-                    <Divider/>
+                    <Divider style={{backgroundColor: '#ccc'}}/>
                     <SexBadges {...you.statuses} />
                 </Typography>
             </Card>
@@ -44,18 +44,18 @@ const FinalStep = () => {
             <Card className={'ux-final-step__female'}>
                 <Typography>
                     <Row>
-                        <Col span={14}>
+                        <Col span={16}>
                             <Text><Text strong>Full name:</Text> <br/> {partner.firstName}<br/> {partner.lastName}</Text>
                             <br/>
                             <Text><Text strong>Date of birth:</Text><br/>{partner.dateOfBirth}</Text>
                             <br/>
                             <Text><Text strong>ID:</Text> <br/> {partner.id}</Text>
                         </Col>
-                        <Col span={10}>
+                        <Col span={8}>
                             <Portrait src={partner.portraitSrc}/>
                         </Col>
                     </Row>
-                    <Divider/>
+                    <Divider style={{backgroundColor: '#ccc'}}/>
                     <SexBadges {...partner.statuses} />
                 </Typography>
             </Card>

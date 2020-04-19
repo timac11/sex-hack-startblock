@@ -10,7 +10,6 @@ const size = "large";
 
 const AppHeader = () => {
     const history = useHistory();
-
     return (
         <Header className="ux-header">
             <div>

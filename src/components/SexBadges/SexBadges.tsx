@@ -11,7 +11,9 @@ export const SexBadges: React.FC<ISexBadges> = ({medicalDataProvided, medicalDat
 
     return <div>
         <Badge status={medicalDataProvided ? 'success' : 'default'} text={medicalDataProvided ? 'Medical data provided' : 'Medical data is not provided yet'}/>
+        <br/>
         <Badge status={medicalDataVerified ? 'success' : 'default'} text={medicalDataVerified ? 'Medical data verified' : 'Medical data is not verified yet'}/>
+        <br/>
         <Badge status={consentToSexualRelationships ? 'success' : 'default'} text={consentToSexualRelationships ? 'Consent to sexual relationships' : 'Сonsent not yet confirmed'}/>
     </div>;
 };
