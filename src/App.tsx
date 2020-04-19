@@ -10,7 +10,7 @@ import LoginPage from "./pages/login/login-page";
 import RegistrationPage from "./pages/registration/registration-page";
 import AppHeader from "./components/header/header";
 import UsersPage from "./pages/users/users-page";
-import {Layout} from "antd";
+import {Button, Layout} from "antd";
 import UserPage from "./pages/user/user-page";
 import AgreementPage from "./pages/agreement/agreement-page";
 import DoctorPage from "./pages/doctor/doctor-page";
@@ -42,6 +42,16 @@ class App extends Component {
                     </Route>
                     <Route path="/doctor">
                         <DoctorPage/>
+                    </Route>
+                    <Route path={'/clear'}>
+                        <Button
+                            onClick={() => {
+                                localStorage.removeItem('male_consent');
+                                localStorage.removeItem('female_consent');
+                            }}
+                        >
+                            Clear
+                        </Button>
                     </Route>
                 </Switch>
                 </Layout>
