@@ -14,7 +14,7 @@ const Agreement = () => {
             </Button>
             <Modal
                 title="Agreement with privacy"
-                width="80%"
+                width="30%"
                 centered
                 visible={visible}
                 onOk={() => setVisible(false)}
@@ -22,19 +22,7 @@ const Agreement = () => {
                 okText="Agree"
                 cancelText="Cancel"
             >
-                <p>Bla bla ...</p>
-                <p>Bla bla ...</p>
-                <p>Bla bla ...</p>
-                <p>Bla bla ...</p>
-                <p>Bla bla ...</p>
-                <p>Bla bla ...</p>
-                <p>Bla bla ...</p>
-                <p>Bla bla ...</p>
-                <p>Bla bla ...</p>
-                <p>Bla bla ...</p>
-                <p>Bla bla ...</p>
-                <p>Bla bla ...</p>
-                <p>Bla bla ...</p>
+                <p>I confirm that the data provided by me is correct and I agree with the rules for using the service</p>
             </Modal>
         </div>
     )
