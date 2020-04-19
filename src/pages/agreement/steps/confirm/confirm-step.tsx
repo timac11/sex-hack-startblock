@@ -4,7 +4,7 @@ import "./confirm-step.less";
 import {usePartners} from "../../../../hooks/usePartner/usePartners";
 import {useUserStorage} from "../../../../hooks/useUserStorage/useUserStorage";
 
-const {Title, Paragraph, Text} = Typography;
+const {Title, Text} = Typography;
 
 const ConfirmStep = () => {
     const [partners] = usePartners();

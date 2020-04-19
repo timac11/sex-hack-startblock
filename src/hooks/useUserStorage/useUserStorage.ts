@@ -57,6 +57,6 @@ export const useUserStorage = () => {
         getCurrentUser,
         clear,
         confirm,
-        confirmed
+        confirmed,
     }
 };
