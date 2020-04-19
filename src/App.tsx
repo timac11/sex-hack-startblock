@@ -13,7 +13,6 @@ import UsersPage from "./pages/users/users-page";
 import {Layout} from "antd";
 import UserPage from "./pages/user/user-page";
 import AgreementPage from "./pages/agreement/agreement-page";
-import { DoctorPage } from './pages/doctor';
 
 class App extends Component {
     render() {
@@ -39,9 +38,6 @@ class App extends Component {
                     </Route>
                     <Route path="/users">
                         <UsersPage/>
-                    </Route>
-                    <Route path={'/doctor'}>
-                        <DoctorPage />
                     </Route>
                 </Switch>
                 </Layout>
