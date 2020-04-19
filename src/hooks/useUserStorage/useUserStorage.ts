@@ -1,4 +1,8 @@
+import {useState} from "react";
+
 export const useUserStorage = () => {
+    const [confirmed, setConfirmed] = useState<boolean>(localStorage.getItem(`${localStorage.getItem('currentUser')}_consent`) === 'consent');
+
     const getCurrentUser = () => {
         return localStorage.getItem('currentUser');
     };
@@ -34,9 +38,25 @@ export const useUserStorage = () => {
         localStorage.removeItem('currentUser');
     };
 
+    const confirm = () => {
+        switch (getCurrentUser()) {
+            case 'male': {
+                localStorage.setItem('male_consent', 'consent');
+                break;
+            }
+            case 'female': {
+                localStorage.setItem('female_consent', 'consent');
+                break;
+            }
+        }
+        setConfirmed(true);
+    };
+
     return {
         auth,
         getCurrentUser,
-        clear
+        clear,
+        confirm,
+        confirmed
     }
 };

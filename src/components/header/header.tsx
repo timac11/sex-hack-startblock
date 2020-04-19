@@ -1,19 +1,22 @@
 import React from "react";
-import {Button, Layout} from "antd";
+import {Button, Layout, Typography} from "antd";
 import {useHistory} from "react-router-dom";
 
 import LogoStartBlock from "../../resources/LogoStartBlock.png";
 import "./header.less";
 import {useUserStorage} from "../../hooks/useUserStorage/useUserStorage";
+import {usePartners} from "../../hooks/usePartner/usePartners";
 
 const {Header} = Layout;
+const {Title} = Typography;
 const size = "large";
 
 const AppHeader = () => {
     const history = useHistory();
     const userStorage = useUserStorage();
-
     const currentUser = userStorage.getCurrentUser();
+    const [partners] = usePartners();
+    const user = currentUser === 'male' ? partners.male : partners.female;
 
     return (
         <Header className="ux-header">
@@ -25,7 +28,7 @@ const AppHeader = () => {
             <div className="ux-header__buttons-wrapper">
                 {
                     currentUser ? <>
-                        {/*<Text strong>{userStorag}</Text>*/}
+                        <Title level={4} style={{color: '#ffffff', margin: '0 16px 0 0'}}>{user.firstName} {user.lastName}</Title>
                         <Button className="ux-header__logout-button"
                                           type="default"
                                           size={size}

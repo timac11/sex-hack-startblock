@@ -2,11 +2,17 @@ import React from "react";
 import {Button, Typography, Card, Divider} from "antd";
 import "./confirm-step.less";
 import {usePartners} from "../../../../hooks/usePartner/usePartners";
+import {useUserStorage} from "../../../../hooks/useUserStorage/useUserStorage";
 
 const {Title, Paragraph, Text} = Typography;
 
 const ConfirmStep = () => {
     const [partners] = usePartners();
+    const userStorage = useUserStorage();
+
+    const onConfirm = () => {
+        userStorage.confirm()
+    };
 
     return (
         <div className="ux-confirm-step__container">
@@ -62,8 +68,8 @@ const ConfirmStep = () => {
                 </Card>
             </Typography>
             <div className="ux-medical-step__button-wrapper">
-            <Button type="primary" block size="large">
-                Confirm
+            <Button type="primary" block size="large" onClick={onConfirm} disabled={userStorage.confirmed}>
+                {userStorage.confirmed ? 'Confirmed' : 'Confirm'}
             </Button>
             </div>
         </div>
