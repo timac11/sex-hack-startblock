@@ -2,6 +2,8 @@ import React from "react";
 import {Button, Checkbox, Form, Input} from "antd";
 import startBlock from "../../resources/startblock.jpg";
 import "./login-page.less"
+import {useUserStorage} from "../../hooks/useUserStorage/useUserStorage";
+import { useHistory } from "react-router-dom";
 
 const layout = {
     labelCol: {span: 8},
@@ -16,7 +18,8 @@ const validationRules = {
 };
 
 const LoginPage = () => {
-    
+    const userStorage = useUserStorage();
+    const history = useHistory();
 
     return (
         <div className="ux-login-page__form-wrapper">
@@ -28,7 +31,21 @@ const LoginPage = () => {
                 className="ux-login-page__form"
                 initialValues={{remember: true}}
                 {...layout}
+                onFinish={result => {
+                    switch (userStorage.auth(result.username, result.password)) {
+                        case 'doctor': {
+                            history.push('/doctor');
+                            break;
+                        }
+                        case 'male':
+                        case 'female': {
+                            history.push('/user');
+                            break;
+                        }
+                    }
 
+
+                }}
             >
                 <Form.Item label="Username"
                            name="username"

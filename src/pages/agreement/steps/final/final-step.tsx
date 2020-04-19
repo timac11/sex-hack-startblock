@@ -5,18 +5,20 @@ import {usePartners} from "../../../../hooks/usePartner/usePartners";
 import {Portrait} from "../../../../components/Portrait/portrait";
 import {SexBadges} from "../../../../components/SexBadges/SexBadges";
 import _ from 'lodash';
+import {useUserStorage} from "../../../../hooks/useUserStorage/useUserStorage";
 
 const {Text, Title} = Typography;
 
 const FinalStep = () => {
-    const amiMale = true;//@todo remove hardcode
+    const userStorage = useUserStorage();
+    const amiMale = userStorage.getCurrentUser() === 'male';
     const [partners] = usePartners();
     const you = amiMale ? partners.male : partners.female;
     const partner = amiMale ? partners.female : partners.male;
 
     return <Row className={'ux-final-step'}>
         <Col span={8}>
-            <Title level={3}>{amiMale ? 'You' : 'Your partner'}</Title>
+            <Title level={3}>{'You'}</Title>
             <Card className={'ux-final-step__male'}>
                 <Typography>
                     <Row>
@@ -37,10 +39,10 @@ const FinalStep = () => {
             </Card>
         </Col>
         <Col span={1} className={'ux-final-step__divider'}>
-            <Title level={4}>{_.isEqual(you.statuses, partner.statuses) ? 'Mutually' : 'Not mutually'}</Title>
+            <Title level={4}>{(you.statuses.consentToSexualRelationships && partner.statuses.consentToSexualRelationships) ? 'Mutually' : 'Not mutually'}</Title>
         </Col>
         <Col span={8}>
-            <Title level={3}>{amiMale ? 'Your partner' : 'You'}</Title>
+            <Title level={3}>{'Your partner'}</Title>
             <Card className={'ux-final-step__female'}>
                 <Typography>
                     <Row>
