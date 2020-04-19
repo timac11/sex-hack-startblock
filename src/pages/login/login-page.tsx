@@ -1,6 +1,5 @@
 import React from "react";
 import {Button, Checkbox, Form, Input} from "antd";
-import startBlock from "../../resources/startblock.jpg";
 import "./login-page.less"
 import {useUserStorage} from "../../hooks/useUserStorage/useUserStorage";
 import { useHistory } from "react-router-dom";
@@ -23,9 +22,6 @@ const LoginPage = () => {
 
     return (
         <div className="ux-login-page__form-wrapper">
-            <div className="ux-login-page__logo-wrapper">
-                <img className="ux-login-page__logo" src={startBlock} alt=""/>
-            </div>
             <Form
                 name="basic"
                 className="ux-login-page__form"

@@ -1,7 +1,7 @@
-import React from "react";
-import {Form, Row, Input, Col, Checkbox, Button} from "antd";
+import React, {useState} from "react";
+import {Form, Row, Input, Col, Checkbox, Button, Result} from "antd";
 import "./doctor-page.less";
-import {putInformation, verifyHash} from "../../blockchain/medicalRegistry";
+import {putInformation} from "../../blockchain/medicalRegistry";
 
 const medicalData: string[] = [
     "Syphilis",
@@ -17,8 +17,14 @@ const medicalData: string[] = [
 ];
 
 const DoctorPage = () => {
+    const [loading, setLoading] = useState(false);
+    const [verified, setVerified] = useState(false);
+
     const verifyUserHash = async () => {
-        const result = await putInformation(getInformation());
+        setLoading(true);
+        await putInformation(getInformation());
+        setVerified(true);
+        setLoading(false);
     };
 
     return <div className="ux-doctor-page__form-wrapper">
@@ -41,13 +47,20 @@ const DoctorPage = () => {
                 </Row>
             </Input.Group>
             <Checkbox.Group options={medicalData} defaultValue={['Apple']}/>
-            <div className="ux-medical-step__button-wrapper">
-                <Button type="primary"
-                        block size="large"
-                        onClick={verifyUserHash}>
-                    Put into blockchain
-                </Button>
-            </div>
+            {verified
+                ?
+                <Result title="Successfully put into blockchain"/>
+                :
+                <div className="ux-medical-step__button-wrapper">
+                    <Button type="primary"
+                            hidden={verified}
+                            loading={loading}
+                            block size="large"
+                            onClick={verifyUserHash}>
+                        Put into blockchain
+                    </Button>
+                </div>
+            }
         </Form>
     </div>
 };

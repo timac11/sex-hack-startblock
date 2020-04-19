@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Button, Checkbox, Typography} from "antd";
+import {Button, Checkbox, Input, Typography} from "antd";
 import "./user.page.less"
 import { Avatar } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
@@ -13,7 +13,7 @@ const { Paragraph } = Typography;
 const UserPage = () => {
     const userStorage = useUserStorage();
     const [partners] = usePartners();
-
+    const [link, setLink] = useState("");
     const [user, setUser] = useState<IPartner>();
 
     useEffect(() => {
@@ -29,6 +29,10 @@ const UserPage = () => {
         }
         
     }, []);
+
+    const generateLink = () => {
+        setLink( "http://" + window.location.host + "/agreement?num=0Xasdasfsdfsdfsdflksnn123sdasd1919053j5nfsfasfsdnfssn");
+    };
 
     return (
         <div className="ux-user-page__container">
@@ -53,7 +57,10 @@ const UserPage = () => {
             </div>
             <div className="ux-user-page__button-wrapper generate-button">
                 <Agreement/>
-                <Button type="primary" block size="large">
+                <Input style={{marginBottom: "16px"}} value={link}></Input>
+                <Button type="primary"
+                        block size="large"
+                        onClick={generateLink}>
                     Generate Link
                 </Button>
             </div>
