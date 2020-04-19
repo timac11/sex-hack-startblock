@@ -6,6 +6,7 @@ import { UserOutlined } from '@ant-design/icons';
 import Agreement from "../../components/agreement/agreement";
 import {IPartner, usePartners} from "../../hooks/usePartner/usePartners";
 import {useUserStorage} from "../../hooks/useUserStorage/useUserStorage";
+import {Female, Male} from "../../hooks/usePartner/Images";
 
 const { Paragraph } = Typography;
 
@@ -43,7 +44,7 @@ const UserPage = () => {
                     <Paragraph copyable>This is a copyable text.</Paragraph>
                     <Paragraph copyable={{ text: 'Hello, Ant Design!' }}>Replace copy text.</Paragraph>
                 </div>
-                <Avatar size={256} icon={<UserOutlined/>} />
+                <Avatar size={256} icon={userStorage.getCurrentUser() === 'male' ? <Male /> : (userStorage.getCurrentUser() === 'female' ? <Female/> : <UserOutlined/>)} />
             </div>
             <div className="ux-user-page__button-wrapper">
                 <Button type="primary" block size="large">
