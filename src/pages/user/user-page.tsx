@@ -27,7 +27,7 @@ const UserPage = () => {
             }
         }
         
-    }, [partners.female, partners.male, userStorage]);
+    }, []);
 
     return (
         <div className="ux-user-page__container">
