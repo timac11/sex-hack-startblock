@@ -56,12 +56,6 @@ const partners: IPartnersData = {
     }
 };
 
-export const usePartners = (amiMale: boolean): [IPartnersData, IPartner, IPartner] => {
-
-
-    if (amiMale) {
-        return [partners, partners.male, partners.female];
-    } else {
-        return [partners, partners.female, partners.female];
-    }
+export const usePartners = (): [IPartnersData] => {
+    return [partners];
 };

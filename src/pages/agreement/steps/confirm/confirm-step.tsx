@@ -6,7 +6,7 @@ import {usePartners} from "../../../../hooks/usePartner/usePartners";
 const {Title, Paragraph, Text} = Typography;
 
 const ConfirmStep = () => {
-    const [partners] = usePartners(true); //@todo remove hardcode
+    const [partners] = usePartners();
 
     return (
         <div className="ux-confirm-step__container">

@@ -9,11 +9,14 @@ import _ from 'lodash';
 const {Text, Title} = Typography;
 
 const FinalStep = () => {
-    const [partners, you, partner] = usePartners(true); //@todo remove hardcode
+    const amiMale = true;//@todo remove hardcode
+    const [partners] = usePartners();
+    const you = amiMale ? partners.male : partners.female;
+    const partner = amiMale ? partners.female : partners.male;
 
     return <Row className={'ux-final-step'}>
         <Col span={8}>
-            <Title level={3}>You</Title>
+            <Title level={3}>{amiMale ? 'You' : 'Your partner'}</Title>
             <Card className={'ux-final-step__male'}>
                 <Typography>
                     <Row>
@@ -37,7 +40,7 @@ const FinalStep = () => {
             <Title level={4}>{_.isEqual(you.statuses, partner.statuses) ? 'Mutually' : 'Not mutually'}</Title>
         </Col>
         <Col span={8}>
-            <Title level={3}>Your partner</Title>
+            <Title level={3}>{amiMale ? 'Your partner' : 'You'}</Title>
             <Card className={'ux-final-step__female'}>
                 <Typography>
                     <Row>
