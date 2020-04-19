@@ -54,7 +54,7 @@ const DoctorPage = () => {
 
 const getInformation = () => {
     // TODO add information about user
-    return {someText: "some"};
+    return {};
 };
 
 export default DoctorPage;
